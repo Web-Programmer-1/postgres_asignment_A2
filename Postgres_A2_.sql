@@ -137,16 +137,16 @@ LIMIT 2;
 
 -- Poblem No:7
 
-SELECT * FROM species;
+
 
 UPDATE species 
 SET conservation_status = 'Historic'
 WHERE discovery_date < '1825-01-01';
 
+SELECT * from species;
 
 
 
-SELECT * FROM sightings;
 -- poblem No:8
 
 
@@ -169,7 +169,6 @@ DELETE FROM rangers
 WHERE ranger_id NOT IN (
   SELECT DISTINCT ranger_id FROM sightings
 );
-
 
 
 
